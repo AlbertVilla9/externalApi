@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/home', [App\Http\Controllers\FormController::class, 'crear'])->name('form');
